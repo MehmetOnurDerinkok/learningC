@@ -1,0 +1,197 @@
+/*
+#include <stdio.h>
+void ekranaBastir(const char* mesaj ) {
+
+	printf("%s\n", mesaj );
+}
+int main() {
+	int girdi;
+	const char* mesaj;
+	printf("bir sayi giriniz: ");
+	scanf_s("%d", &girdi);
+	if (girdi < 5) {
+		printf("hello world\n");
+		printf("seni yerim canim esim");
+	}
+	else if (girdi == 5) {
+		printf("bu sayi 5 mi la?");
+
+	}
+	else if (girdi<10 && girdi>5){
+		printf("ben de sizi yerim beyfendi");
+	}
+	else if (girdi > 10) {
+		mesaj = "10'dan buyuk sayi girme!";
+		ekranaBastir(mesaj);
+	}
+	return  0;
+
+const int ledRed = 6;
+const int ledBrown = 4;
+const int ledBlue = 3;
+const int ledGreen = 2;
+const int buton = 5;
+int sayac = 0;
+void() setup {
+	pinMode(ledRed, OUTPUT);
+	pinMode(ledBrown, OUTPUT);
+	pinMode(ledBlue, OUTPUT);
+	pinMode(ledGreen, OUTPUT);
+	pinMode(buton, INPUT);
+}
+void main() {
+	if (digitalRead(buton == HIGH) {
+		sayac += sayac;
+	}
+	if (sayac == 1) {
+		digitalWrite (ledRed,HIGH);
+
+	}
+	if (sayac == 2) {
+		digitalWrite(ledBrown, HIGH);
+
+	}
+	if (sayac == 3) {
+		digitalWrite(ledBlue, HIGH);
+
+	}
+	if (sayac == 4) {
+		digitalWrite(ledGreen, HIGH);
+
+	}
+}
+*/
+/*
+#include <stdio.h>
+int main() {
+	int sayi1, i,  toplam =0;
+	printf("Toplamını merak ettiginiz sayiyi giriniz: ");
+	scanf_s("%d", &sayi1);
+	for (i = 0; i <= sayi1; i++) {
+		toplam = toplam + i;
+		printf("Toplam: %d \n", toplam);
+	}
+	printf("Toplam: %d", toplam);
+	return 0;
+}
+*/
+/*
+#include <stdio.h>
+int s1, s2, s3, s4, s5;
+int buyuk, kucuk;
+int main() {
+	printf("5 adet sayi giriniz:\n");
+printf("Birinci sayiyi giriniz: ");
+scanf_s("%d", &s1);
+printf("Ikinci sayiyi giriniz: ");
+scanf_s("%d", &s2);
+printf("Ucuncu sayiyi giriniz: ");
+scanf_s("%d", &s3);
+printf("Dorduncu sayiyi giriniz: ");
+scanf_s("%d", &s4);	
+printf("Besinci sayiyi giriniz: ");	
+scanf_s("%d", &s5);
+buyuk = (s1 > s2 && s1 > s3 && s1 > s4 && s1 > s5) ? s1 :
+	(s2 > s1 && s2 > s3 && s2 > s4 && s2 > s5) ? s2 :
+	(s3 > s1 && s3 > s2 && s3 > s4 && s3 > s5) ? s3 :
+	(s4 > s1 && s4 > s2 && s4 > s3 && s4 > s5) ? s4 :
+	s5;
+kucuk = (s1 < s2 && s1 < s3 && s1 < s4 && s1 < s5) ? s1 :	
+	(s2 < s1 && s2 < s3 && s2 < s4 && s2 < s5) ? s2 :
+	(s3 < s1 && s3 < s2 && s3 < s4 && s3 < s5) ? s3 :
+	(s4 < s1 && s4 < s2 && s4 < s3 && s4 < s5) ? s4 :
+	s5;
+printf("En buyuk sayi: %d\n", buyuk);
+printf("En kucuk sayi: %d\n", kucuk);
+return 0;
+}
+*/
+/*
+#include <stdio.h>
+int main() {
+	int sayi1, sayi2;
+	char secim;
+	printf("Birinci sayiyi giriniz: "); 
+	scanf_s("%d", &sayi1);
+	printf("Ikinci sayiyi giriniz: ");
+	scanf_s("%d", &sayi2);
+	printf("Toplama islemi icin +, cikarma islemi icin -, carpma islemi icin *, bolme islemi icin / tuslayiniz: ");
+	scanf_s(" %c", &secim);
+	switch (secim) {
+	case '+':
+		printf("Sonuc: %d", sayi1 + sayi2);
+		break;
+	case '-':
+		printf("Sonuc: %d", sayi1 - sayi2);
+		break;
+	case '*':
+		printf("Sonuc: %d", sayi1 * sayi2);
+		break;
+	case '/':
+		if (sayi1 == 0 && sayi2 == 0) {
+			printf("Bolme islemi yapilamaz");
+
+		}
+		else if (sayi2 == 0) {
+			printf("Bolme islemi yapilamaz");
+		}
+		else {
+			printf("Sonuc: %d", sayi1 / sayi2);
+		}
+	}
+}
+*/
+/*
+#include <stdio.h>
+int main() {
+	int a = 0, b = 0, i ;
+	int tekToplam = 0, ciftToplam = 0;
+	printf("Bir sayi giriniz: ");
+	scanf_s("%d", &a);
+	for (i = 1; i <= a;i++) {
+		if (i % 2 == 0) {
+			ciftToplam += i;
+		}
+		else if (i % 2 != 0) {
+			tekToplam += i;
+		}
+	}
+	printf("Tek sayilarin toplami: %d\n", tekToplam);
+	printf("Cift sayilarin toplami: %d\n", ciftToplam);
+	return 0;
+
+
+}
+*/
+//isim alıp ekrana tüm harfleri tek tek yazdırma
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <string.h>
+int main() {
+	char isim[10];
+	int i=0;
+	printf("Isminizi giriniz: ");
+	scanf("%s", &isim);
+	int uzunluk = strlen(isim);
+
+	//for (i = 0; i <= 10 && i < uzunluk; i++) {
+	//	printf("Isminizin %d . harfi : %c \n", i + 1, isim[i]);
+	//}
+	while (i < uzunluk) {
+		printf("Isminizin %d . harfi : %c \n", i + 1, isim[i]);
+		i++;
+
+	}
+	return 0;
+}
+/*
+int main() {
+	char isim[10];
+	int i;
+	printf("Isminizi giriniz: ");
+	scanf_s("%9s", isim, (unsigned)_countof(isim)); // & operatörü kaldırıldı ve sınır belirtildi
+	for (i = 0; isim[i] != '\0'; i++) { // Döngü sınırı düzeltildi
+		printf("Isminizin %d. harfi: %c\n", i + 1, isim[i]);
+	}
+	return 0;
+}*/
