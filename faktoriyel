@@ -1,0 +1,18 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int faktoriyel(int a) {
+	int i, sayi=0;
+	for (i = 0; i <= a; i++) {
+		i *= sayi;
+	}
+	return sayi;
+}
+int main() {
+	int x;
+	printf("sayi gir: ");
+	scanf("%d", &x);
+	int sonuc = faktoriyel(x);
+	printf("Sayının faktoriyeli: %d", sonuc);
+ 
+}
