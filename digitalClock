@@ -1,0 +1,63 @@
+#include <stdio.h>
+int main(){
+int hour, min, sec;
+printf("Please enter your local time: \n");
+while(1){
+printf("H: ");
+scanf ("%d", &hour);
+if (hour >= 0 && hour < 24){
+	break;
+}
+else if (hour>=24 ){
+//	printf("H: ");
+//	scanf("%d", &hour);
+}
+}
+while(1){
+printf("M: ");
+scanf ("%d", &min);
+if (min >= 0 && min < 60){
+	break;
+}
+else if (min>=60 ){
+//	printf("M: ");
+//	scanf("%d", &min); if we write this line program wants two minute value one of them this line; other is on 18th line
+}
+}
+while (1){
+printf("S: ");
+scanf ("%d", &sec);
+if (sec >= 0 && sec < 60){
+	break;
+}
+else if (sec>= 60 ){
+//	printf("M: ");
+//	scanf("%d", &sec);
+}
+
+}
+while(1){
+	system("cls");
+	printf("%02d : %02d : %02d ", hour,min,sec);
+	Sleep(1000);
+	sec++;
+	if (sec>=60){
+		sec = 0;
+		min ++;
+	}
+	if (min>=60){
+		hour ++;
+		min=0;
+		
+	}
+	if (hour>=24){
+		hour=0;
+		min=0;
+		sec=0;
+	}
+	
+}
+getchar ();
+return 0;
+
+}
