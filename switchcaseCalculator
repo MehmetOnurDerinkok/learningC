@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <math.h>
+int main(){
+    float num1 = 0 ;
+    float num2 =0;
+    char math = '\0';
+    float temp = 0;
+    printf ("what do you want to calculate? please enetr your calculation\n");
+    scanf("%f %c %f", &num1, &math, &num2);
+    switch (math){
+        case '+':
+            temp = num1 + num2;
+            printf("%.2f",temp);
+            break;
+        case '-':
+            temp = num1 - num2;
+            printf("%.2f", temp);
+            break;
+        case '*':
+            temp =num1*num2;
+            printf ("%.2f", temp);
+            break;
+        case '/':
+            if (num2 != 0){
+                temp = num1 /num2 ;
+                printf ("%.2f", temp);
+                
+            }            
+            else {
+                printf ("second number must not be 0.");
+           
+            }
+        break;     
+    }
+    }
