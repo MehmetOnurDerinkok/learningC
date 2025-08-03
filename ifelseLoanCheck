@@ -1,0 +1,70 @@
+/*
+Kullanıcıdan şu bilgiler alınacak:
+
+Adı (string)
+
+Yaşı (int)
+
+Aylık gelir (float)
+
+Aylık borç miktarı (float)
+
+Mevcut kredi puanı (0-100 arası)
+
+Program:
+
+Kredi uygunluğu için:
+
+18 yaşından büyük olmalı
+
+Aylık gelir > aylık borcun 2 katı olmalı
+
+Kredi puanı >= 60 olmalı
+
+Tüm kriterler uygunsa kredi verilsin, değilse nedenleri açıklasın.
+*/
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+int main()
+{
+char name [50] ="";
+int birthYear = 0;
+int currentYear =0 ;
+float income = 0.0f;
+float monthlyDebt = 0.0f;
+float creditscore = 0.0f;
+printf("Please enter your name and surname: ");
+fgets (name, sizeof(name), stdin);
+name[strlen(name)-1]='\0';
+printf ("please enter your year of birth: ");
+scanf("%d", &birthYear);
+printf("Please enter the current year: ");
+scanf ("%d", &currentYear);
+if (80>= (currentYear-birthYear) >=18){
+    printf("Please enter your monthly debt: ");
+    scanf("%f", &monthlyDebt);
+    printf("Please enter your monthly income: ");
+    scanf("%f", &income);
+    printf("Please enter your credit score: ");
+    scanf("%f", &creditscore);
+
+    if (creditscore >= 60 && (income > (monthlyDebt*2)))
+    {
+        printf("Credit approved.");
+    }
+    else {
+        printf("please call the costumer service.");
+    }
+    
+}
+else if (0<(currentYear-birthYear)<18  && (currentYear-birthYear)>80){
+    printf("your age is not okey for a loan unfortunately.");
+}
+else{
+    printf("Age is incorrect. Please try again.");
+}
+
+return 0;
+
+}
